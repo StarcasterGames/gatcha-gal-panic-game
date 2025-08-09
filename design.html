@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gatcha Gal Panic Design Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Zen+Maru+Gothic:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <div class="nav-brand">
+        <img src="assets/img/logo_gatcha.png" alt="Gatcha Gal Panic" />
+        <span>Gatcha Gal Panic</span>
+      </div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="design.html">Design Document</a>
+        <a href="demo.html">Play Demo</a>
+      </div>
+    </div>
+  </nav>
+  <header class="hero" style="padding-bottom:40px;">
+    <div class="container">
+      <div>
+        <h1>Design Document</h1>
+        <p class="tagline">Detailed blueprint for Gatcha Gal Panic. Learn about the world, mechanics, systems and production roadmap.</p>
+      </div>
+      <div>
+        <img src="assets/img/poster_wide.png" alt="Poster" style="width:100%; border-radius:20px; box-shadow: 0 8px 20px rgba(0,0,0,0.1);" />
+      </div>
+    </div>
+  </header>
+
+  <section id="overview">
+    <div class="container">
+      <h2>1) Overview</h2>
+      <p class="lede"><strong>Gatcha Gal Panic</strong> is a love letter to Japanese arcade culture. Half soft‑body claw challenge, half café management sim, and all otaku charm. Rescue AI‑powered "Gals" from an ever‑expanding catalogue of crane games, run your own themed cafés and complete missions to unlock new décor and stories.</p>
+      <div class="panel" style="margin-top:20px;">
+        <div class="head"><span>Core Fantasy</span><span></span></div>
+        <div class="body">
+          You are a prize game prodigy hired by Uka Torigoe, the charismatic manager of a humble Neo‑Akiba café. Your task: collect the most coveted Gatcha Gals from arcades around town to staff and promote your establishment. With each mission completed, your café grows more spectacular and your collection more legendary.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="map">
+    <div class="container">
+      <h2>2) Overworld & Arcades</h2>
+      <p class="lede">v0.6 introduces a playable map inspired by Akihabara. Five arcades and one café are placed on a simple 3D street grid. Move your avatar between locations, each of which features its own signage and palette reflecting its themes.</p>
+      <div class="panel" style="margin-top:20px;">
+        <div class="head"><span>Locations</span><span></span></div>
+        <div class="body">
+          <ul>
+            <li><strong>Café (Home Base):</strong> Meet Uka Torigoe, accept missions, customize décor and review your Gals.</li>
+            <li><strong>Joybox Alley:</strong> Neko & Maid themes. Machines: Girls & Bridge.</li>
+            <li><strong>Neo‑Taito:</strong> Tech & Idol themes. Machines: Capsules & Bridge.</li>
+            <li><strong>Giga Dome:</strong> Maid & Shrine themes. Machines: Girls & Capsules.</li>
+            <li><strong>Otome Plaza:</strong> Idol & Neko themes. Machines: Girls only.</li>
+            <li><strong>Mecha Mart:</strong> Tech theme. Machines: Capsules & Bridge.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel" style="margin-top:20px;">
+        <div class="head"><span>Mission System</span><span></span></div>
+        <div class="body">
+          Uka assigns missions like “Rescue 1 Maid of Rare+” or “Collect two Neko commons.” Completing a mission rewards Yen and décor items that visibly change your café. A mission tracker panel in the HUD lets you track progress at all times. Future builds will allow multiple active missions, with branching storylines and unlockable branches of the café chain.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gameplay">
+    <div class="container">
+      <h2>3) Arcade Gameplay & Machine Types</h2>
+      <p class="lede">Each arcade houses different crane games. v0.6 includes three playable types, with more planned. The rarity roll table is shared across games: Common (60%), Rare (25%), Super Rare (10%), Legendary (4%), Ultimate (1%).</p>
+      <div class="panel" style="margin-top:20px;">
+        <div class="head"><span>Standard Claw – Loose Girls</span><span>Soft‑body</span></div>
+        <div class="body">
+          Girls are free inside the pit. Each is represented by a soft‑body proxy that jiggles and can wriggle to escape your claw. Move the claw with WASD and hold Space to grip. Escape probability is based on the Girl’s personality and your grip strength. Drop her into the chute to add her to your roster.
+        </div>
+      </div>
+      <div class="panel" style="margin-top:20px;">
+        <div class="head"><span>Standard Claw – Capsules</span><span>Rigid</span></div>
+        <div class="body">
+          Girls are sealed inside half‑clear, half‑colored capsules. The claw must perfectly align to pick up the capsule. Capsules roll realistically; failing to grip them can knock others around. Collect capsules to open them, reveal the Girl and add her to your roster.
+        </div>
+      </div>
+      <div class="panel" style="margin-top:20px;">
+        <div class="head"><span>Bridge‑Style (Bar Drop)</span><span>Skill & Precision</span></div>
+        <div class="body">
+          Boxes or capsules rest on two parallel bars. The goal is to nudge them so they slip between the bars. Press Space near an edge to push. This type rewards patience and positional precision. Successful drops still roll on the shared rarity table.
+        </div>
+      </div>
+      <div class="panel" style="margin-top:20px;">
+        <div class="head"><span>Roadmap</span><span>Coming Soon</span></div>
+        <div class="body">
+          Future builds will introduce additional UFO catcher types inspired by Japanese classics:
+          <ul>
+            <li><strong>Ring Hook / Loop Lift:</strong> Hook a loop attached to the prize; carefully pulling it free.</li>
+            <li><strong>Pusher‑Style:</strong> The claw pushes stacks of prizes toward an edge.</li>
+            <li><strong>Drop‑Through Goal:</strong> Pick up a small ball or capsule and drop it into a numbered slot.</li>
+            <li><strong>Balance Beam:</strong> Knock precariously balanced prizes off a seesaw.</li>
+            <li><strong>Slide‑Down / Snow Plow:</strong> Nudge large items down an incline past obstacles.</li>
+            <li><strong>Rope Cut / String Break:</strong> Use the claw’s blade to fray a rope until the prize drops.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="characters">
+    <div class="container">
+      <h2>4) Gatcha Gals</h2>
+      <p class="lede">Gals vary in class (Maid, Idol, Tech, Shrine, Neko), rarity and personality. Personalities influence escape strength in the pit and work performance in the café. Rarities affect base stats and unlock unique costumes.</p>
+      <div class="panel">
+        <div class="head"><span>Classes & Personalities</span><span></span></div>
+        <div class="body">
+          <ul>
+            <li><strong>Maid –</strong> High customer service; loves café tasks.</li>
+            <li><strong>Idol –</strong> Excels at para‑para shows and draws VIP guests.</li>
+            <li><strong>Tech –</strong> Improves arcade machine calibration and payout.</li>
+            <li><strong>Shrine –</strong> Adds festive bonuses and charm buffs.</li>
+            <li><strong>Neko –</strong> Cute, mischievous and boosts tips with charm.</li>
+          </ul>
+          <p>Personality archetypes include Cooperative, Shy, Mischievous, Competitive and Diva. These influence escape frequency and success rates as well as café behaviour.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="systems">
+    <div class="container">
+      <h2>5) Café Systems & Progression</h2>
+      <p class="lede">Between arcade runs, you’ll manage your café. Use Yen and mission rewards to decorate and expand your space, assign Gals to roles, and run para‑para shows that keep customers happy.</p>
+      <div class="panel">
+        <div class="head"><span>Décor & Upgrades</span><span></span></div>
+        <div class="body">
+          Completing missions unlocks décor items such as lanterns, posters and signage. In v0.6 décor upgrades are purely visual, but future versions will add buff effects (e.g. increased tip rates or faster service).
+        </div>
+      </div>
+      <div class="panel" style="margin-top:20px;">
+        <div class="head"><span>Para‑Para & Mini‑Games</span><span></span></div>
+        <div class="body">
+          Rhythm mini‑games allow your idols to perform shows that increase café hype. The more hype, the more customers you attract. Not yet implemented in v0.6.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="production">
+    <div class="container">
+      <h2>6) Production & Roadmap</h2>
+      <div class="panel">
+        <div class="head"><span>Current Scope (v0.6)</span><span></span></div>
+        <div class="body">
+          <ul>
+            <li>Overworld map with 5 arcades and 1 café.</li>
+            <li>Two core machine types (Girls, Capsules) and one precision machine (Bridge).</li>
+            <li>Mission system with rewards and progress HUD.</li>
+            <li>Basic café décor upgrades and interactive Uka NPC.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel" style="margin-top:20px;">
+        <div class="head"><span>Next Steps</span><span></span></div>
+        <div class="body">
+          <ul>
+            <li>Add more machine types and refine physics (soft‑body deformation, rope cutting etc.).</li>
+            <li>Implement para‑para mini‑game and more detailed café management.</li>
+            <li>Introduce story events and branching missions.</li>
+            <li>Polish visuals and add licensed soundtrack.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container" style="padding: 40px 20px; color: var(--muted-color); font-size: 14px;">© 2025 Naughty B!t — Gatcha Gal Panic. All rights reserved.</div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gatcha Gal Panic Demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Zen+Maru+Gothic:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    body, html { margin: 0; padding: 0; overflow: hidden; }
+    #game { display: block; width: 100vw; height: 100vh; }
+  </style>
+</head>
+<body>
+  <div id="hud">
+    <h3>Status</h3>
+    <p id="yen">Yen: 0</p>
+    <p id="location">Location: Overworld</p>
+    <h3>Missions</h3>
+    <ul id="missions"></ul>
+    <h3>Collection</h3>
+    <ul id="inventory"></ul>
+  </div>
+  <div id="prompt"></div>
+  <canvas id="game"></canvas>
+  <script type="module" src="js/demo.js"></script>
+</body>
+</html>
